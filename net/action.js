@@ -1,3 +1,4 @@
 module.exports = {
-    AUTH_REQ: 'AuthAction.ASK'
+    AUTH_REQ: 'Auth.Ask',
+    AUTH_TEST: 'Auth.Test'
 };

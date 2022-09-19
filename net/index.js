@@ -18,9 +18,23 @@ function handleConnection(conn) {
     function onConnData(d) {  
         console.log('TCP - Data - %s: %j', remoteAddress, d);  
 
+        d = String(d).substring(0, d.length - 2);
+        console.log('s', d.length, d);
+
+        if (String(d) == '.') {
+            conn.end('\n\tBTTM\n\n');
+            return;
+        }
+
         var data = String(d).split(',');
         var Action = data[0];
-        var Data = date[1].split('|');
+        var Data = String(data[1]);
+
+        if (Data) {
+            Data = Data.split('|')
+        } else {
+            Data = [];
+        }
 
         if (Action == ACTION.AUTH_REQ) {
             conn.write('1,OK');
