@@ -1,4 +1,7 @@
 module.exports = {
-    AUTH_REQ: 'Auth.Ask',
-    AUTH_TEST: 'Auth.Test'
+    PING: '0',
+
+    SERVER_REGISTER: '1',
+    SERVER_TOKEN: '2',
+    SERVER_STATUS: '3'
 };
