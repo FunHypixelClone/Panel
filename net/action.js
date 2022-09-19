@@ -1,7 +1,6 @@
 module.exports = {
     PING: '0',
 
-    SERVER_REGISTER: '1',
-    SERVER_TOKEN: '2',
-    SERVER_STATUS: '3'
+    SERVER_REGISTER: '1', // Register server type (skyblock, bedwars, housing ect)
+    SERVER_STATUS: '2', // online, offline
 };
